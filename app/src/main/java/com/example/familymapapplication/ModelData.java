@@ -5,6 +5,7 @@ import java.util.Comparator;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 import java.util.TreeMap;
 
 import model.Person;
@@ -46,24 +47,30 @@ public class ModelData {
     }
 
 
-    public ArrayList<Person> getImmediateFamily(String personID) {
-        ArrayList<Person> returnArray = new ArrayList<>();
+    public HashMap<String, Person> getImmediateFamily(String personID) {
+        //ArrayList<Person> returnArray = new ArrayList<>();
 
         Person person = persons.get(personID);
         Person father = persons.get(person.getFather());
         Person mother = persons.get(person.getMother());
         Person spouse = persons.get(person.getSpouse());
 
-        if (father != null) returnArray.add(father);
-        if (mother != null) returnArray.add(mother);
-        if (spouse != null) returnArray.add(spouse);
+
+        HashMap<String, Person> returnMap = new HashMap<>();
+
+        if (father != null) returnMap.put("father", father);
+        if (mother != null) returnMap.put("mother", mother);
+        if (spouse != null) returnMap.put("spouse", spouse);
 
 
 
 //        if (person.getGender().equalsIgnoreCase("m")) {
+
+        int i = 0;
         for (Person possibleChild : persons.values()) {
+            String childKey = "child" + i;
             if (possibleChild.getFather().equalsIgnoreCase(personID) || possibleChild.getMother().equalsIgnoreCase(personID)) {
-                returnArray.add(possibleChild);
+                returnMap.put(childKey, possibleChild);
             }
         }
 //        }
@@ -75,7 +82,7 @@ public class ModelData {
 //            }
 //        }
 
-        return returnArray;
+        return returnMap;
     }
 
     public ArrayList<Event> getLifeEvents(String personID) {

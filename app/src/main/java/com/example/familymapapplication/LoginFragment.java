@@ -158,7 +158,7 @@ public class LoginFragment extends Fragment implements RegisterTask.Context, Log
 
         String _serverHost = "10.0.2.2";
         String _serverPort = "8080";
-        String _userName = "nathan_clark";
+        String _userName = "nathanclark";
         String _password = "clark";
 
         ModelData data = ModelData.getInstance( );

@@ -68,7 +68,7 @@ public class FillService {
             person.setGender(user.getGender());
             person.setDescendant(user.getUserName());
 
-            // fill database with events for that person
+            // fill database with events and people for that person
             deletePersonFromDatabase(conn, request.getUserName());
             Event event = createSingleEvent(conn, user);
             fillWithPeople(conn, person, request.getGenerations(), request.getUserName(), event.getYear());
@@ -156,13 +156,13 @@ public class FillService {
         String maleName = maleData.getData()[y];
         String surname = surData.getData()[z];
 
+        // create hash values for father and mother
+        String fatherHash = UUID.randomUUID().toString().toLowerCase();
+        String motherHash = UUID.randomUUID().toString().toLowerCase();
+
         // create father and mother
-        Person mother = new Person(UUID.randomUUID().toString().toLowerCase(), descendant,
-                femaleName, surname, "f", "",
-                "", maleName);
-        Person father = new Person(UUID.randomUUID().toString().toLowerCase(), descendant,
-                maleName, surname, "m", "",
-                "", femaleName);
+        Person mother = new Person(motherHash, descendant, femaleName, surname, "f", "", "", fatherHash);
+        Person father = new Person(fatherHash, descendant, maleName, surname, "m", "", "", motherHash);
 
         // add both to array to return
         Person[] persons = new Person[2];
