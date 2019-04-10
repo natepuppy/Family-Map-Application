@@ -58,6 +58,8 @@ public class ModelData {
         if (mother != null) returnArray.add(mother);
         if (spouse != null) returnArray.add(spouse);
 
+
+
 //        if (person.getGender().equalsIgnoreCase("m")) {
         for (Person possibleChild : persons.values()) {
             if (possibleChild.getFather().equalsIgnoreCase(personID) || possibleChild.getMother().equalsIgnoreCase(personID)) {
