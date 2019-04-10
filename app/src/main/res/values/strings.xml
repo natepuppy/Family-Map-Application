@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Family Map</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string name="login_toast">Login!</string>
+    <string name="register_toast">Register!</string>
+    <string name="title_activity_maps">Map</string>
+
+
+    <!--Take these out!!!!-->
+    <string name="search_menu_item">s</string>
+    <string name="filter_menu_item">f</string>
+    <string name="settings_menu_item">s</string>
+</resources>

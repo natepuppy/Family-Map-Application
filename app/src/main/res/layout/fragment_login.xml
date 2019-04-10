@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/GridLayout1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="50dp"
+    android:columnCount="2"
+    android:orientation="horizontal"
+    android:padding="10dp"
+    android:rowCount="10">
+
+    <Space />
+
+
+
+
+
+    <TextView
+        android:id="@+id/Server_Host_Text"
+        android:layout_row="0"
+        android:layout_column="0"
+        android:text="Server Host:" />
+
+    <EditText
+        android:id="@+id/Server_Host_Entry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/Server_Port_Text"
+        android:text="Server Port:" />
+
+    <EditText
+        android:id="@+id/Server_Port_Entry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/User_Name_Text"
+        android:text="User Name:" />
+
+    <EditText
+        android:id="@+id/User_Name_Entry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/Password_Text"
+        android:text="Password:" />
+
+    <EditText
+        android:id="@+id/Password_Entry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword" />
+
+    <TextView
+        android:id="@+id/First_Name_Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="First Name:" />
+
+    <EditText
+        android:id="@+id/First_Name_Entry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/Last_Name_Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Last Name:" />
+
+    <EditText
+        android:id="@+id/Last_Name_Entry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/Email_Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email:" />
+
+    <EditText
+        android:id="@+id/Email_Entry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textEmailAddress" />
+
+    <TextView
+        android:id="@+id/Gender_Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gender:" />
+
+    <RadioGroup
+        android:id="@+id/Group_Radio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/Male_Radio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Male" />
+
+        <RadioButton
+            android:id="@+id/Female_Radio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Female" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/Sign_In_Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign In" />
+
+    <Button
+        android:id="@+id/Register_Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register" />
+
+
+</GridLayout>
